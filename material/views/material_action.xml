@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="material_actions_id" model="ir.actions.act_window">
+        <field name="name">Material</field>
+        <field name="res_model">material</field>
+    </record>
+    <record id="material_suplier_actions_id" model="ir.actions.act_window">
+        <field name="name">Suplier</field>
+        <field name="res_model">material.suplier</field>
+    </record>
+</odoo>

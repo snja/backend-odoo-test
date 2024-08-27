@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="material_search" model="ir.ui.view">
+        <field name="name">material.search</field>
+        <field name="model">material</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Name"
+                       filter_domain="['|',('name', 'ilike', self), ('suplier_id', 'ilike', self)]"/>
+                <filter name="filter_type_jeans" string="Jeans" domain="[('type', '=', 'jeans')]"/>
+                <filter name="filter_type_cotton" string="Cotton" domain="[('type', '=', 'cotton')]"/>
+                <filter name="filter_type_fabric" string="Fabric" domain="[('type', '=', 'fabric')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="material_tree_view_id" model="ir.ui.view">
+        <field name="name">material_tree_view_id</field>
+        <field name="model">material</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="suplier_id"/>
+                <field name="type"/>
+                <field name="buy_price"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

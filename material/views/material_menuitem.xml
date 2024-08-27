@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="parent_material_id" name="Backend Odoo Test" sequence="10"/>
+    <menuitem
+            id="child_material_id"
+            name="Material"
+            parent="material.parent_material_id"
+            action="material.material_actions_id"/>
+        <menuitem
+            id="child_material_suplier_id"
+            name="Suplier"
+            parent="material.parent_material_id"
+            action="material.material_suplier_actions_id"/>
+</odoo>
